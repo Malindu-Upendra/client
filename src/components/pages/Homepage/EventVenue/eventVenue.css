@@ -1,0 +1,24 @@
+.eventVenueHeading{
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+
+.eventVenue2{
+    color: #c2c2a3;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+
+hr.line2{
+    border: 1px solid #c2c2a3;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -1,0 +1,153 @@
+
+.Title{
+    
+    font-size: 38px;
+    font-family: "Raleway", sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    color: #011B28;
+}
+
+hr.hline{
+    border: 1px solid;
+}
+
+
+
+/*#contact {*/
+/*    padding: 60px 0;*/
+/*}*/
+
+/*#contact .contact-info {*/
+/*    margin-bottom: 20px;*/
+/*    text-align: center;*/
+/*}*/
+
+/*#contact .contact-info i {*/
+/*    font-size: 48px;*/
+/*    display: inline-block;*/
+/*    margin-bottom: 10px;*/
+/*    color: #d6a8e4de;*/
+/*}*/
+
+/*#contact .contact-info address,*/
+/*#contact .contact-info p {*/
+/*    margin-bottom: 0;*/
+/*    color: #112363;*/
+/*}*/
+
+/*#contact .contact-info h3 {*/
+/*    font-size: 18px;*/
+/*    margin-bottom: 15px;*/
+/*    font-weight: bold;*/
+/*    text-transform: uppercase;*/
+/*    color: #112363;*/
+/*}*/
+
+/*#contact .contact-info a {*/
+/*    color: #4869df;*/
+/*}*/
+
+/*#contact .contact-info a:hover {*/
+/*    color: #d6a8e4de;*/
+/*}*/
+
+/*#contact .contact-address,*/
+/*#contact .contact-phone,*/
+/*#contact .contact-email {*/
+/*    margin-bottom: 20px;*/
+/*}*/
+
+h3{
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: left;
+    font-style: normal;
+
+}
+
+input[type=text], select, textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+input[type=email], select, textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+/* Style the label to display next to the inputs */
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    margin-left: 30px;
+}
+
+/* Style the submit button */
+input[type=submit] {
+    background-color:darkslategray;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: left;
+    margin-left: 130px;
+    margin-top: 20px;
+}
+
+/* Style the container */
+/*.container {*/
+/*    border-radius: 5px;*/
+/*    background-color: #f2f2f2;*/
+/*    padding: 20px;*/
+/*}*/
+
+.errormsg{
+    color: red;
+}
+
+/* Floating column for labels: 25% width */
+.col-25 {
+    float: left;
+    width: 10%;
+    margin-top: 6px;
+}
+
+/* Floating column for inputs: 75% width */
+.col-75 {
+    float: left;
+    width: 35%;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
