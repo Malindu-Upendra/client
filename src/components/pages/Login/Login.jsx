@@ -42,11 +42,11 @@ const Login = () => {
             const user = decode(sessionStorage.token).position;
 
             if(user === 'Admin'){
-                window.location = "https://elegant-mestorf-3970d4.netlify.app/admin/attendees"
+                location.replace = "/admin/attendees"
             }else if(user === 'Reviewer'){
-                window.location = "https://elegant-mestorf-3970d4.netlify.app/reviewer/researchPaper"
+                location.replace = "/reviewer/researchPaper"
             }if(user === 'Editor'){
-                window.location = "https://elegant-mestorf-3970d4.netlify.app/editor/getConferenceTracks"
+                location.replace = "/editor/getConferenceTracks"
             }
         }
     }
