@@ -20,7 +20,7 @@ class InsertedKeynotes extends Component{
 
     ApproveKeynote = (id) => {
 
-        axios.put(`http://localhost:5000/admin/approvekeynote/${id}`).then(res => {
+        axios.put(`https://icaf2022-backend.herokuapp.com/admin/approvekeynote/${id}`).then(res => {
             if(res.data.success){
                 window.location.reload(false);
             }
@@ -30,7 +30,7 @@ class InsertedKeynotes extends Component{
 
     DeclineKeynote = (id) => {
 
-        axios.put(`http://localhost:5000/admin/declinekeynote/${id}`).then(res => {
+        axios.put(`https://icaf2022-backend.herokuapp.com/admin/declinekeynote/${id}`).then(res => {
             if(res.data.success) {
                 window.location.reload(false);
             }
