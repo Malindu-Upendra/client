@@ -42,11 +42,11 @@ const Login = () => {
             const user = decode(sessionStorage.token).position;
 
             if(user === 'Admin'){
-                location.replace = "/admin/attendees"
+                location.replace("/admin/attendees")
             }else if(user === 'Reviewer'){
-                location.replace = "/reviewer/researchPaper"
-            }if(user === 'Editor'){
-                location.replace = "/editor/getConferenceTracks"
+                location.replace(`${window.location.href}/reviewer/researchPaper`)
+            }else if(user === 'Editor'){
+                window.location.replace(`${window.location.href}/editor/getConferenceTracks`)
             }
         }
     }
