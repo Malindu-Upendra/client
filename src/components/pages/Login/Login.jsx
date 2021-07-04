@@ -42,7 +42,7 @@ const Login = () => {
             const user = decode(sessionStorage.token).position;
 
             if(user === 'Admin'){
-                location.replace("/admin/attendees")
+                window.location = window.location.href+"/admin/attendees"
             }else if(user === 'Reviewer'){
                 location.replace(`${window.location.href}/reviewer/researchPaper`)
             }else if(user === 'Editor'){
