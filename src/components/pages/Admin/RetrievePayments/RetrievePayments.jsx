@@ -10,7 +10,7 @@ export class RetrievePayments extends Component {
 
     componentDidMount = () => {
 
-        axios.get('http://localhost:5000/admin/getPayments').then(res => {
+        axios.get('https://icaf2022-backend.herokuapp.com/admin/getPayments').then(res => {
             this.setState({payments:res.data})
         })
 

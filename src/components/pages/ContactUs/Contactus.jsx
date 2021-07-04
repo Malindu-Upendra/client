@@ -72,7 +72,7 @@ export class Contactus extends Component{
             this.setState({ errors });
         }
 
-        axios.post('http://localhost:5000/user/ContactUs',this.state.data)
+        axios.post('https://icaf2022-backend.herokuapp.com/user/ContactUs',this.state.data)
             .then(response => {
                 if (response.data.success) {
                     window.location = '/'

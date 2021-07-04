@@ -20,7 +20,7 @@ export class UpdateImportantDates extends Component{
 
         const id = this.props.match.params.id;
 
-        axios.get(`http://localhost:5000/editor/getSpecificDate/${id}`).then(res => {
+        axios.get(`https://icaf2022-backend.herokuapp.com/editor/getSpecificDate/${id}`).then(res => {
             if(res.data.success){
                 const data = res.data.data;
                 this.setState({id:data._id})
@@ -47,7 +47,7 @@ export class UpdateImportantDates extends Component{
             description: this.state.description
         };
         console.log('Data send:', AddImportant)
-        axios.put('http://localhost:5000/editor/updateImportantDates',AddImportant)
+        axios.put('https://icaf2022-backend.herokuapp.com/editor/updateImportantDates',AddImportant)
             .then(response => {
                 alert('AddImportantDates data are successfully updated')
                 window.location = "/editor/getImportantDates"

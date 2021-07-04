@@ -25,7 +25,7 @@ export default function Paypal(props) {
                     });
                 },
                 onApprove: async (data, actions) => {
-                    await axios.post('http://localhost:5000/user/attendee',user).then(res => {
+                    await axios.post('https://icaf2022-backend.herokuapp.com/user/attendee',user).then(res => {
                         if(res.data.success) {
                             props.onSuccess();
                             // window.location = '/';

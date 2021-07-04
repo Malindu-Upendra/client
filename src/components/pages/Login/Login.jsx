@@ -27,7 +27,7 @@ const Login = () => {
             password:password
         }
 
-        await axios.post('http://localhost:5000/admin/login',LoginData)
+        await axios.post('https://icaf2022-backend.herokuapp.com/admin/login',LoginData)
             .then(response => {
                 if (response.data.success) {
                     sessionStorage.setItem("token",response.data.token)

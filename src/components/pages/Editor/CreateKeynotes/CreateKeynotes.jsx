@@ -42,7 +42,7 @@ export class CreateKeynotes extends Component{
         formData.append("description", this.state.description);
         formData.append("image", this.state.image);
 
-         await axios.post('http://localhost:5000/editor/keynotes',formData)
+         await axios.post('https://icaf2022-backend.herokuapp.com/editor/keynotes',formData)
             .then(response => {
                  alert('KeyNotes data successfully inserted')
                  window.location.reload(false)

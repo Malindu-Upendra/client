@@ -12,7 +12,7 @@ export class ListAllWorkshop extends Component{
 
     componentDidMount = () => {
         const id = this.props.match.params.id;
-        axios.get(`http://localhost:5000/reviewer/workshopGetById/${id}`).then(res => {
+        axios.get(`https://icaf2022-backend.herokuapp.com/reviewer/workshopGetById/${id}`).then(res => {
             if(res.data.success){
                 this.setState({paper:res.data.data})
             }

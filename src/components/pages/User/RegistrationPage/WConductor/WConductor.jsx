@@ -46,7 +46,7 @@ export class WConductor extends Component{
             formData.append("email", this.state.email);
             formData.append("image", this.state.image);
 
-            axios.post('http://localhost:5000/user/uploadWorkShop', formData).then(res => {
+            axios.post('https://icaf2022-backend.herokuapp.com/user/uploadWorkShop', formData).then(res => {
                 this.setState({visibility:false});
                 this.setState({success:true});
                 setTimeout(() => {this.ModalOff()},200000)

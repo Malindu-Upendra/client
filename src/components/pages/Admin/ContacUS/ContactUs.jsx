@@ -10,7 +10,7 @@ export class ContactUs extends Component {
 
     componentDidMount = () => {
 
-        axios.get('http://localhost:5000/admin/contactUs').then(res => {
+        axios.get('https://icaf2022-backend.herokuapp.com/admin/contactUs').then(res => {
             this.setState({info:res.data})
         })
 

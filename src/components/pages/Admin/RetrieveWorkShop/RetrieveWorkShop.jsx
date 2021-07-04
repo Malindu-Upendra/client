@@ -10,7 +10,7 @@ export class RetrieveWorkShop extends Component {
 
     componentDidMount = () => {
 
-        axios.get('http://localhost:5000/admin/workshops').then(res => {
+        axios.get('https://icaf2022-backend.herokuapp.com/admin/workshops').then(res => {
             this.setState({workshops:res.data})
         })
 

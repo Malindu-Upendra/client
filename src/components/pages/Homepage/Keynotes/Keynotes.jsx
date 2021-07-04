@@ -21,7 +21,7 @@ class Keynote extends Component{
 
     componentDidMount = () => {
 
-        axios.get('http://localhost:5000/homepage/getKeynotes').then(res => {
+        axios.get('https://icaf2022-backend.herokuapp.com/homepage/getKeynotes').then(res => {
                 if (res.data.success) {
                     this.setState({keynotes:res.data.data})
                     console.log(res.data.data)

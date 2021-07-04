@@ -10,7 +10,7 @@ export class Attendees extends Component {
 
     componentDidMount = () => {
 
-        axios.get('http://localhost:5000/admin/attendees').then(res => {
+        axios.get('https://icaf2022-backend.herokuapp.com/admin/attendees').then(res => {
             this.setState({attendees:res.data})
         })
 

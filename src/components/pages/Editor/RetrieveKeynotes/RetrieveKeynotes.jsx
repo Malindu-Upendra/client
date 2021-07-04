@@ -11,7 +11,7 @@ class RetrieveKeynotes extends Component{
 
     componentDidMount = () => {
 
-        axios.get('http://localhost:5000/editor/getKeynotes').then(res => {
+        axios.get('https://icaf2022-backend.herokuapp.com/editor/getKeynotes').then(res => {
             this.setState({keynotes:res.data})
         })
 

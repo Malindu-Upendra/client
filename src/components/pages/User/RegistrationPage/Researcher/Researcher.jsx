@@ -46,7 +46,7 @@ export class Researcher extends Component{
             formData.append("phoneNumber", this.state.phoneNumber);
             formData.append("paper", this.state.paper);
 
-            axios.post('http://localhost:5000/user/uploadResearch', formData).then(res => {
+            axios.post('https://icaf2022-backend.herokuapp.com/user/uploadResearch', formData).then(res => {
                 this.setState({visibility:false});
                 this.setState({success:true});
                 setTimeout(() => {this.ModalOff()},200000)

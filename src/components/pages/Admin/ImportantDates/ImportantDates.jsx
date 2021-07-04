@@ -10,7 +10,7 @@ export class ImportantDates extends Component {
 
     componentDidMount = () => {
 
-        axios.get('http://localhost:5000/admin/getImportantDates').then(res => {
+        axios.get('https://icaf2022-backend.herokuapp.com/admin/getImportantDates').then(res => {
             this.setState({importantDates:res.data.data})
         })
 
@@ -18,7 +18,7 @@ export class ImportantDates extends Component {
 
     ApproveDate = (id) => {
 
-        axios.put(`http://localhost:5000/admin/approveDate/${id}`).then(res => {
+        axios.put(`https://icaf2022-backend.herokuapp.com/admin/approveDate/${id}`).then(res => {
                 if(res.data.success){
                     window.location.reload(false);
                 }
@@ -29,7 +29,7 @@ export class ImportantDates extends Component {
 
     DeclineDate = (id) => {
 
-        axios.put(`http://localhost:5000/admin/declineDate/${id}`).then(res => {
+        axios.put(`https://icaf2022-backend.herokuapp.com/admin/declineDate/${id}`).then(res => {
                 if(res.data.success){
                     window.location.reload(false);
                 }

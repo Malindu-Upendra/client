@@ -10,7 +10,7 @@ class InsertedKeynotes extends Component{
 
     componentDidMount() {
 
-        axios.get('http://localhost:5000/admin/getKeynotes').then(res => {
+        axios.get('https://icaf2022-backend.herokuapp.com/admin/getKeynotes').then(res => {
             if(res.data.success){
                 this.setState({keynotes:res.data.data})
             }

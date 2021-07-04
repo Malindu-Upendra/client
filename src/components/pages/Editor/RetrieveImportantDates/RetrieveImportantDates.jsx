@@ -10,7 +10,7 @@ class RetrieveImportantDates extends Component{
 
     componentDidMount = () => {
 
-        axios.get('http://localhost:5000/editor/getImportantDates').then(res => {
+        axios.get('https://icaf2022-backend.herokuapp.com/editor/getImportantDates').then(res => {
             this.setState({importantDates:res.data})
         })
 

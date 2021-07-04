@@ -12,7 +12,7 @@ export class ViewWorkShop extends Component{
     }
 
     componentDidMount() {
-        axios.get('http://localhost:5000/reviewer/uploadedWorkshops').
+        axios.get('https://icaf2022-backend.herokuapp.com/reviewer/uploadedWorkshops').
         then(res => {
             const  workshops = res.data;
             //console.log( workshops);
@@ -27,7 +27,7 @@ export class ViewWorkShop extends Component{
             email:email
         }
 
-        axios.put(`http://localhost:5000/reviewer/declineWorkShop/${id}`,data).
+        axios.put(`https://icaf2022-backend.herokuapp.com/reviewer/declineWorkShop/${id}`,data).
         then(res =>{
             if(res.data.success){
                 alert(res.data.message);
@@ -43,7 +43,7 @@ export class ViewWorkShop extends Component{
             email:email
         }
 
-        axios.put(`http://localhost:5000/reviewer/approveWorkShop/${id}`,data).
+        axios.put(`https://icaf2022-backend.herokuapp.com/reviewer/approveWorkShop/${id}`,data).
         then(res =>{
             if(res.data.success){
                 alert(res.data.message);

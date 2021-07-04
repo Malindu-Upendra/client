@@ -11,7 +11,7 @@ export class ViewUploadResearchPapers extends Component{
         ResearchPaper:[]
     }
     componentDidMount() {
-        axios.get('http://localhost:5000/reviewer/uploadedResearchPapers').
+        axios.get('https://icaf2022-backend.herokuapp.com/reviewer/uploadedResearchPapers').
         then(res => {
             const  ResearchPapers = res.data;
             console.log( ResearchPapers);
@@ -24,7 +24,7 @@ export class ViewUploadResearchPapers extends Component{
             id:id,
             email:email
         }
-        axios.put(`http://localhost:5000/reviewer/declineResearch/${id}`,data).
+        axios.put(`https://icaf2022-backend.herokuapp.com/reviewer/declineResearch/${id}`,data).
         then(res =>{
             if(res.data.success){
                 alert(res.data.message);
@@ -38,7 +38,7 @@ export class ViewUploadResearchPapers extends Component{
             id:id,
             email:email
         }
-        axios.put(`http://localhost:5000/reviewer/approveResearch/${id}`,data).
+        axios.put(`https://icaf2022-backend.herokuapp.com/reviewer/approveResearch/${id}`,data).
         then(res =>{
             if(res.data.success){
                 alert(res.data.message);

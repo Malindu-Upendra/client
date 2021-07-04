@@ -23,7 +23,7 @@ export class UpdateConferenceTracks extends Component{
         const id = this.props.match.params.id;
         console.log(id)
 
-        axios.get(`http://localhost:5000/editor/getSpecificConferenceTrack/${id}`).then(res => {
+        axios.get(`https://icaf2022-backend.herokuapp.com/editor/getSpecificConferenceTrack/${id}`).then(res => {
             if(res.data.success){
                 const data = res.data.data
                 this.setState({id:data._id})
@@ -66,7 +66,7 @@ export class UpdateConferenceTracks extends Component{
         };
 
         console.log('Data send:', AddConferenceTrack)
-        axios.put('http://localhost:5000/editor/updateConferenceTracks',AddConferenceTrack)
+        axios.put('https://icaf2022-backend.herokuapp.com/editor/updateConferenceTracks',AddConferenceTrack)
             .then(response => {
                 alert('AddConferenceTracks data are successfully updated')
                 window.location = "/editor/getConferenceTracks"

@@ -13,7 +13,7 @@ class TemplateUploadAndRetrieve extends Component {
 
     componentDidMount = () => {
 
-        axios.get('http://localhost:5000/reviewer/getTemplates').then(res => {
+        axios.get('https://icaf2022-backend.herokuapp.com/reviewer/getTemplates').then(res => {
             if(res.data.success){
                 this.setState({templates:res.data.data})
                 this.setState({received:true})
@@ -48,7 +48,7 @@ class TemplateUploadAndRetrieve extends Component {
         formData.append("title", this.state.title);
         formData.append("paper", this.state.paper);
 
-        axios.post('http://localhost:5000/reviewer/uploadTemplate',formData).then(res => {
+        axios.post('https://icaf2022-backend.herokuapp.com/reviewer/uploadTemplate',formData).then(res => {
             if(res.data.success){
                 alert("Successfully Added");
                 window.location.reload(false);

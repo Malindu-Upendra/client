@@ -20,7 +20,7 @@ class Keynote extends Component{
 
     componentDidMount = () => {
 
-        axios.get('http://localhost:5000/homepage/getConferenceTracks').then(res => {
+        axios.get('https://icaf2022-backend.herokuapp.com/homepage/getConferenceTracks').then(res => {
                 if (res.data.success) {
                     this.setState({conferenceT:res.data.data})
                     console.log(res.data.data)

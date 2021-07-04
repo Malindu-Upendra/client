@@ -10,7 +10,7 @@ export class RetrieveResearch extends Component {
 
     componentDidMount = () => {
 
-        axios.get('http://localhost:5000/admin/researchpapers').then(res => {
+        axios.get('https://icaf2022-backend.herokuapp.com/admin/researchpapers').then(res => {
             this.setState({researchPapers:res.data})
         })
 

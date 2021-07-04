@@ -12,7 +12,7 @@ class SpecificKeynoteDetails extends Component {
 
         const id = this.props.match.params.id;
 
-        axios.get(`http://localhost:5000/homepage/getSpecificKeynote/${id}`).then(res => {
+        axios.get(`https://icaf2022-backend.herokuapp.com/homepage/getSpecificKeynote/${id}`).then(res => {
             if (res.data.success) {
                 this.setState({keynote: res.data.data});
             }

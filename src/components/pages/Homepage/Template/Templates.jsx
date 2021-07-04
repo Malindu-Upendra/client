@@ -21,7 +21,7 @@ class Template extends Component{
 
     componentDidMount = () => {
 
-        axios.get('http://localhost:5000/homepage/getTemplates').then(res => {
+        axios.get('https://icaf2022-backend.herokuapp.com/homepage/getTemplates').then(res => {
                 if (res.data.success) {
                     this.setState({templates:res.data.data})
                     console.log(res.data.data)

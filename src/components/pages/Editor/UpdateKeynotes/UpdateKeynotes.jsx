@@ -25,7 +25,7 @@ export class UpdateKeynotes extends Component{
         const id = this.props.match.params.id;
         console.log(id);
 
-        axios.get(`http://localhost:5000/editor/getSpecificKeynote/${id}`).then(res => {
+        axios.get(`https://icaf2022-backend.herokuapp.com/editor/getSpecificKeynote/${id}`).then(res => {
                     if(res.data.success){
                         const data = res.data.data;
                         this.setState({id:data._id})
@@ -65,7 +65,7 @@ export class UpdateKeynotes extends Component{
           formData.append("image", this.state.image);
           formData.append("cloudinaryID", this.state.cloudinaryID);
 
-          await axios.put('http://localhost:5000/editor/updateKeynote',formData)
+          await axios.put('https://icaf2022-backend.herokuapp.com/editor/updateKeynote',formData)
                 .then(response => {
                      alert('KeyNotes data successfully updated')
                      window.location = "/editor/getKeynotes"

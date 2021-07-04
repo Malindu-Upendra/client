@@ -47,7 +47,7 @@ export class AddConferenceTracks extends Component{
             description: this.state.description
         };
         console.log('Data send:', AddConferenceTrack)
-        axios.post('http://localhost:5000/editor/addConferenceTracksForm',AddConferenceTrack)
+        axios.post('https://icaf2022-backend.herokuapp.com/editor/addConferenceTracksForm',AddConferenceTrack)
             .then(response => {
                 alert('AddConferenceTracks data are successfully inserted')
                 window.location.reload(false)

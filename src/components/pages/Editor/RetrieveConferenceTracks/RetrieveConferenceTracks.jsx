@@ -10,7 +10,7 @@ class RetrieveConferenceTracks extends Component{
 
     componentDidMount = () => {
 
-        axios.get('http://localhost:5000/editor/getConferenceTracks').then(res => {
+        axios.get('https://icaf2022-backend.herokuapp.com/editor/getConferenceTracks').then(res => {
             this.setState({conferenceT:res.data})
         })
 

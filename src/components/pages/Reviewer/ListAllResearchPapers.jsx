@@ -11,7 +11,7 @@ export class ListAllResearchPapers extends Component{
 
     componentDidMount = () => {
         const id = this.props.match.params.id;
-        axios.get(`http://localhost:5000/reviewer/getById/${id}`).then(res => {
+        axios.get(`https://icaf2022-backend.herokuapp.com/reviewer/getById/${id}`).then(res => {
             if(res.data.success){
                 this.setState({paper:res.data.data})
             }
